@@ -107,6 +107,31 @@ flutter test
 
 ---
 
+## 🌐 Web build & Vercel deployment
+
+MyWeather also runs as a web app. The repo includes a `web/` target and a
+`vercel.json` that installs Flutter and builds during deployment.
+
+**Deploy on Vercel:** import this repo as a new Vercel project. The included
+`vercel.json` handles everything (no preset needed):
+- *Install:* clones the Flutter SDK and runs `flutter pub get`
+- *Build:* `flutter build web --release`
+- *Output:* `build/web`
+
+**Build it locally:**
+```bash
+flutter build web --release
+# serve the result:
+cd build/web && python3 -m http.server 8000
+```
+
+> ⚠️ Web notes: Open-Meteo (the default source), the geocoding/reverse-geocoding
+> services, OpenWeatherMap and WeatherAPI.com all send permissive CORS headers
+> and work in the browser. **MET Norway may not work on web** — browsers forbid
+> setting the `User-Agent` header it requires — so it can error on the web build
+> (handled gracefully; just disable it in Settings for web). GPS uses the
+> browser Geolocation API and requires HTTPS (Vercel provides this).
+
 ## 🏗️ Architecture
 
 ```

@@ -1,0 +1,7 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "installCommand": "if [ ! -d _flutter ]; then git clone https://github.com/flutter/flutter.git --depth 1 -b stable _flutter; fi && _flutter/bin/flutter config --no-analytics --enable-web && _flutter/bin/flutter pub get",
+  "buildCommand": "_flutter/bin/flutter build web --release --no-tree-shake-icons",
+  "outputDirectory": "build/web"
+}

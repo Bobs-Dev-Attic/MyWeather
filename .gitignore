@@ -1,3 +1,7 @@
+# Vercel / web build tooling
+.vercel/
+_flutter/
+
 # Miscellaneous
 *.class
 *.log

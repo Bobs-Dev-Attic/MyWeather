@@ -1,0 +1,11 @@
+{
+    "name": "MyWeather",
+    "short_name": "MyWeather",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#2196F3",
+    "theme_color": "#2196F3",
+    "description": "Multi-source weather with animated forecasts and historical charts.",
+    "orientation": "portrait-primary",
+    "prefer_related_applications": false
+}
