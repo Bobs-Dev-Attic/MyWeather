@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../models/app_settings.dart';
+import '../models/units.dart';
 import '../models/weather_data.dart';
 import '../utils/formatting.dart';
 
@@ -101,8 +102,8 @@ class _RangeBar extends StatelessWidget {
       width: 80,
       height: 6,
       child: LayoutBuilder(builder: (context, c) {
-        final left = (low.clamp(0, 1)) * c.maxWidth;
-        final width = ((high - low).clamp(0.05, 1)) * c.maxWidth;
+        final left = low.clamp(0.0, 1.0) * c.maxWidth;
+        final width = (high - low).clamp(0.05, 1.0) * c.maxWidth;
         return Stack(
           children: [
             Container(

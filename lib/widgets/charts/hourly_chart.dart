@@ -51,7 +51,7 @@ class HourlyChart extends StatelessWidget {
           gridData: FlGridData(
             show: true,
             drawVerticalLine: false,
-            horizontalInterval: ((maxY - minY).abs() / 3).clamp(1, 1000),
+            horizontalInterval: ((maxY - minY).abs() / 3).clamp(1.0, 1000.0),
             getDrawingHorizontalLine: (v) => FlLine(
               color: color.withValues(alpha: 0.12),
               strokeWidth: 1,
@@ -66,7 +66,7 @@ class HourlyChart extends StatelessWidget {
               sideTitles: SideTitles(
                 showTitles: true,
                 reservedSize: 36,
-                interval: ((maxY - minY).abs() / 3).clamp(1, 1000),
+                interval: ((maxY - minY).abs() / 3).clamp(1.0, 1000.0),
                 getTitlesWidget: (value, meta) => Text(
                   '${value.round()}°',
                   style: labelStyle,
@@ -202,7 +202,7 @@ class PrecipChart extends StatelessWidget {
             for (var i = 0; i < display.length; i++)
               BarChartGroupData(x: i, barRods: [
                 BarChartRodData(
-                  toY: display[i].precipitationProbability ?? 0,
+                  toY: display[i].precipitationProbability ?? 0.0,
                   color: color.withValues(alpha: 0.7),
                   width: 6,
                   borderRadius: const BorderRadius.vertical(

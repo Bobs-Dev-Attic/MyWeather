@@ -52,7 +52,7 @@ class HistoricalTempChart extends StatelessWidget {
     final pad = (maxY - minY) * 0.15 + 1;
     final labelStyle =
         TextStyle(color: color.withValues(alpha: 0.8), fontSize: 11);
-    final labelInterval = (days.length / 5).ceilToDouble().clamp(1, 1000);
+    final labelInterval = (days.length / 5).ceilToDouble().clamp(1.0, 1000.0);
 
     return SizedBox(
       height: 240,

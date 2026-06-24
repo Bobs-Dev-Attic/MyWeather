@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../models/app_settings.dart';
+import '../models/units.dart';
 import '../models/weather_data.dart';
 import '../utils/formatting.dart';
 
